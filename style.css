@@ -1,5 +1,35 @@
 #body {
   display: flex;
-  flex-direction: column;
+  flex-flow: column nowrap ;
   align-items: center;
+}
+
+#calculator-container {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+#buttons-container {
+  display: grid;
+  grid-template-columns: 50px 50px 50px 50px;
+  grid-template-rows: 50px 50px 50px 50px; 
+  column-gap: 10px;
+  row-gap: 15px;
+}
+
+#display {
+  display: flex;
+  flex-flow: row-reverse nowrap;
+}
+
+div.button {
+  background-color: black;
+}
+
+.button p {
+  height: 50px;
+  width: 50px;
+  margin: 20px;
+  padding: 0px;
+  color: white;
 }
