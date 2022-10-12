@@ -13,14 +13,6 @@
   background-color: rgba(0, 0, 0, 0.10);
 }
 
-#buttons-container {
-  display: grid;
-  grid-template-columns: 50px 50px 50px 50px;
-  grid-template-rows: 50px 50px 50px 50px; 
-  column-gap: 5px;
-  row-gap: 10px;
-}
-
 #display {
   display: flex;
   flex-flow: row-reverse nowrap;
@@ -33,6 +25,34 @@
   margin-right: 15px;
   font-size: large;
 }
+
+#removal-buttons {
+  display: flex;
+  flex-flow: row nowrap;
+  margin-bottom: 10px;
+  height: 40px;
+}
+
+#removal-buttons button {
+  flex-grow: 1;
+}
+
+#clear {
+  margin-right: 5px;
+}
+
+#delete {
+  margin-left: 5px;
+}
+
+#buttons-container {
+  display: grid;
+  grid-template-columns: 50px 50px 50px 50px;
+  grid-template-rows: 50px 50px 50px 50px; 
+  column-gap: 5px;
+  row-gap: 10px;
+}
+
 
 .button button {
   height: 50px;
