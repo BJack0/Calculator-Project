@@ -20,10 +20,13 @@
 #display {
   display: flex;
   flex-flow: row-reverse nowrap;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 3px 8px;
+  margin-bottom: 10px;
 }
 
 div.button {
   background-color: black;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 3px 8px;
 }
 
 .button p {
