@@ -39,10 +39,14 @@
 
 #clear {
   margin-right: 5px;
+  padding: 0px;
+  border: 0px;
 }
 
 #delete {
   margin-left: 5px;
+  padding: 0px;
+  border: 0px;
 }
 
 #buttons-container {
@@ -59,4 +63,6 @@
   width: 50px;
   color: black;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 5px;
+  padding: 0px;
+  border: 0px;
 }
