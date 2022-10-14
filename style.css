@@ -13,6 +13,16 @@
   background-color: rgba(0, 0, 0, 0.10);
 }
 
+#storedValue {
+  width: 220px;
+  height: 60px;
+}
+
+#storedValue p {
+  width: 220px;
+  height: 60px;
+}
+
 #display {
   display: flex;
   flex-flow: row-reverse nowrap;
