@@ -24,9 +24,12 @@ function operate(operator, num1, num2) {
 
 var displayValue = document.querySelector("#display p")
 
+var storedValue = document.querySelector("#storedValue p")
+
 const buttonClear = document.getElementById("clear")
 buttonClear.addEventListener("click", () => {
   displayValue.textContent = ""
+  storedValue.textContent = ""
 })
 
 const button0 = document.getElementById("button0")
@@ -77,4 +80,29 @@ button8.addEventListener("click", () => {
 const button9 = document.getElementById("button9")
 button9.addEventListener("click", () => {
   displayValue.textContent = displayValue.textContent + "9"
+})
+
+const buttonPeriod = document.getElementById("buttonPeriod")
+buttonPeriod.addEventListener("click", () => {
+  displayValue.textContent = displayValue.textContent + "."
+})
+
+const buttonPlus = document.getElementById("buttonPlus")
+buttonPlus.addEventListener("click", () => {
+  storedValue.textContent = displayValue.textContent + " +"
+})
+
+const buttonMinus = document.getElementById("buttonMinus")
+buttonMinus.addEventListener("click", () => {
+  storedValue.textContent = displayValue.textContent + " -"
+})
+
+const buttonMultiply = document.getElementById("buttonMultiply")
+buttonMultiply.addEventListener("click", () => {
+  storedValue.textContent = displayValue.textContent + " x"
+})
+
+const buttonDivide = document.getElementById("buttonDivide")
+buttonDivide.addEventListener("click", () => {
+  storedValue.textContent = displayValue.textContent + " /"
 })
