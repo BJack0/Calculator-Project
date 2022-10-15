@@ -1,5 +1,8 @@
 console.log("Welcome to the Calculator Project console!")
 
+var num1
+var num2
+
 function add(num1, num2) {
   return num1 + num2
 }
@@ -19,7 +22,7 @@ function divide(num1, num2) {
 var operator = add
 
 function operate(operator, num1, num2) {
-  return operator(num1, num2)
+  return operator
 }
 
 var displayValue = document.querySelector("#display p")
@@ -90,19 +93,44 @@ buttonPeriod.addEventListener("click", () => {
 const buttonPlus = document.getElementById("buttonPlus")
 buttonPlus.addEventListener("click", () => {
   storedValue.textContent = displayValue.textContent + " +"
+  num1 = storedValue.textContent
+  displayValue.textContent = ""
+  operator = add
 })
 
 const buttonMinus = document.getElementById("buttonMinus")
 buttonMinus.addEventListener("click", () => {
   storedValue.textContent = displayValue.textContent + " -"
+  num1 = storedValue.textContent
+  displayValue.textContent = ""
+  operator = subtract
 })
 
 const buttonMultiply = document.getElementById("buttonMultiply")
 buttonMultiply.addEventListener("click", () => {
-  storedValue.textContent = displayValue.textContent + " x"
+  storedValue.textContent = displayValue.textContent + " *"
+  num1 = storedValue.textContent
+  displayValue.textContent = ""
+  operator = multiply
 })
 
 const buttonDivide = document.getElementById("buttonDivide")
 buttonDivide.addEventListener("click", () => {
   storedValue.textContent = displayValue.textContent + " /"
+  num1 = storedValue.textContent
+  displayValue.textContent = ""
+  operator = divide
 })
+
+const buttonEqual = document.getElementById("buttonEqual")
+buttonEqual.addEventListener("click", () => {
+  storedValue.textContent = storedValue.textContent + " " + displayValue.textContent
+  displayValue.textContent = finalCalculation()
+})
+
+function finalCalculation() {
+  let userInput = storedValue.textContent
+  let result = Function("return " + userInput)()
+  console.log(result)
+  return result
+}
