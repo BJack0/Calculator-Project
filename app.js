@@ -35,6 +35,12 @@ buttonClear.addEventListener("click", () => {
   storedValue.textContent = ""
 })
 
+const buttonDelete = document.getElementById("delete")
+buttonDelete.addEventListener("click", () => {
+  displayValue.textContent = displayValue.textContent.slice(0, -1)
+  storedValue.textContent = storedValue.textContent.slice(0, -1)
+})
+
 const button0 = document.getElementById("button0")
 button0.addEventListener("click", () => {
   displayValue.textContent = displayValue.textContent + "0"
